@@ -26,7 +26,7 @@ class ECAPAModel(nn.Module):
 
 	def train_network(self, epoch, loader):
 		self.train()
-		## Update the learning rate based on the current epcoh
+		## Update the learning rate based on the current epoch
 		self.scheduler.step(epoch - 1)
 		index, top1, loss = 0, 0, 0
 		lr = self.optim.param_groups[0]['lr']
